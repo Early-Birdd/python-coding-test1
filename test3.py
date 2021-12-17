@@ -1,3 +1,5 @@
+#그리디 3번
+
 # n, m = map(int, input().split())
 #
 # result = 0
