@@ -49,18 +49,57 @@
 # q_sort(data, 0, len(data) - 1)
 # print(data)
 
-data = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
+#정렬 1-퀵 정렬(2)
 
-def q_sort(data):
-    if len(data) <= 1:
-        return data
+# data = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
+#
+# def q_sort(data):
+#     if len(data) <= 1:
+#         return data
+#
+#     pivot = data[0]
+#     tail = data[1:]
+#
+#     left = [x for x in tail if x < pivot]
+#     right = [x for x in tail if x > pivot]
+#
+#     return q_sort(left) + [pivot] + q_sort(right)
+#
+# print(q_sort(data))
 
-    pivot = data[0]
-    tail = data[1:]
+#정렬 1-계수 정렬
 
-    left = [x for x in tail if x < pivot]
-    right = [x for x in tail if x > pivot]
+# data = [7, 5, 9, 0, 3, 1, 6, 2, 9, 1, 4, 8, 0, 5, 2]
+#
+# count = [0] * (max(data) + 1)
+#
+# for i in range(len(data)):
+#     count[data[i]] += 1
+#
+# for j in range(len(data)):
+#     for k in range(count[j]):
+#         print(j, end = ' ')
 
-    return q_sort(left) + [pivot] + q_sort(right)
+#정렬 1-python sorted
 
-print(q_sort(data))
+# data = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
+#
+# result = sorted(data)
+# print(result)
+
+#정렬 1-python sort
+
+# data = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
+#
+# data.sort()
+# print(data)
+
+#정렬 1-python sort
+
+data = [('바나나', 2), ('사과', 5), ('당근', 3)]
+
+def setting(array):
+    return array[1]
+
+result = sorted(data, key = setting)
+print(result)
